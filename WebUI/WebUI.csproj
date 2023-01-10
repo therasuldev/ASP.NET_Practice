@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Views\" />
+    <None Remove="Controllers\" />
+    <None Remove="Views\Home\" />
+    <None Remove="Views\Shared\" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\Admin\" />
+    <None Remove="Areas\Admin\Controllers\" />
+    <None Remove="Areas\Admin\Views\" />
+    <None Remove="Areas\Admin\ViewsModels\" />
+    <None Remove="Areas\Admin\Views\Dashboard\" />
+    <None Remove="Areas\Admin\Views\Shared\" />
+    <None Remove="Areas\Admin\Views\SlideItem\" />
+    <None Remove="Areas\Admin\Views\UserManager\" />
+    <None Remove="Areas\Admin\ViewsModels\Slider\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\Admin\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Areas\Admin\ViewsModels\" />
+    <Folder Include="Areas\Admin\Views\Dashboard\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Admin\Views\SlideItem\" />
+    <Folder Include="Areas\Admin\Views\UserManager\" />
+    <Folder Include="Areas\Admin\ViewsModels\Slider\" />
+    <Folder Include="wwwroot\admin\" />
+    <Folder Include="wwwroot\admin\assets\" />
+    <Folder Include="wwwroot\admin\assets\css\" />
+    <Folder Include="wwwroot\admin\assets\images\" />
+    <Folder Include="wwwroot\admin\assets\js\" />
+    <Folder Include="wwwroot\admin\assets\vendors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.12">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\admin\" />
+    <Content Remove="wwwroot\admin\assets\" />
+    <Content Remove="wwwroot\admin\assets\css\" />
+    <Content Remove="wwwroot\admin\assets\images\" />
+    <Content Remove="wwwroot\admin\assets\js\" />
+    <Content Remove="wwwroot\admin\assets\vendors\" />
+  </ItemGroup>
+</Project>

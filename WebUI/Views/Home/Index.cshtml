@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SlideItem>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="our-product section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title text-center">
+                    <h2 class="title">Our Product</h2>
+                    <p class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="product-carousel-4 mbn-50 slick-row-15 slick-arrow-style">
+                    <!-- product single item start -->
+                    @foreach (var item in Model)
+                    {
+                        <div class="product-item mb-50">
+                            <div class="product-thumb">
+                                <a href="product-details.html">
+                                    <img src="assets/img/product/@item.Photo" alt="">
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h5 class="product-name">
+                                    <a href="product-details.html">@item.Name</a>
+                                </h5>
+                                <div class="price-box">
+                                    <span class="price-regular">$@item.Price</span>
+                                    <span class="price-old"><del>$@item.OldPrice</del></span>
+                                </div>
+                                <div class="product-action-link">
+                                    <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
+                                    <a href="#" data-toggle="modal" data-target="#quick_view">
+                                        <span data-toggle="tooltip"
+                                              title="Quick View"><i class="ion-ios-eye-outline"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

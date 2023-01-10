@@ -1,0 +1,64 @@
+﻿
+
+@model IEnumerable<SlideItem>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="col-lg-10 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Slider Table</h4>
+            <a asp-action="Create" class="btn btn-success">Create Slide</a>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                Image
+                            </th>
+
+                            <th>
+                                Name
+                            </th>
+
+                            <th>
+                                Price
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="py-1">
+                                    <img src="~/assets/img/product/@item.Photo" alt="image" />
+                                </td>
+
+                                <td>
+                                    @item.Name
+                                </td>
+
+                                <td>
+                                    @item.Price
+                                </td>
+
+                                <td>
+                                    <div class="row-cols-3">
+                                        <a asp-area="Admin" asp-controller="SlideItem" asp-action="Detail" asp-route-id="@item.Id" class="btn btn-primary">Detail</a>
+                                        <a asp-area="Admin" asp-controller="SlideItem" asp-action="Update" asp-route-id="@item.Id" class="btn btn-warning">Update</a>
+                                        <a asp-area="Admin" asp-controller="SlideItem" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
