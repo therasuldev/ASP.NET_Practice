@@ -1,0 +1,127 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model RegisterViewModel
+@{
+    Layout = null;
+} 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Majestic Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/admin/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/admin/assets/vendors/base/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="~/admin/assets/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="~/admin/assets/images/favicon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-center auth px-0">
+                <div class="row w-100 mx-0">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                            <div class="brand-logo">
+                                <img src="~/admin/assets/images/logo.svg" alt="logo">
+                            </div>
+                            <form class="pt-3" method="post">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail">Fullname </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-account-outline text-primary"></i>
+                                            </span>
+                                        </div>
+                                        <input asp-for="Fullname" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Fullname">
+                                    </div>
+                                    <span asp-validation-for="Fullname" class="text-danger"></span>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail">Username </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-account-outline text-primary"></i>
+                                            </span>
+                                        </div>
+                                        <input asp-for="Username" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Username">
+                                        <span asp-validation-for="Username" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail">Email </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-account-outline text-primary"></i>
+                                            </span>
+                                        </div>
+                                        <input asp-for="Email" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Email">
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail">Password </label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-account-outline text-primary"></i>
+                                            </span>
+                                        </div>
+                                        <input asp-for="Password" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Password">
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail">Confirm Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-account-outline text-primary"></i>
+                                            </span>
+                                        </div>
+                                        <input asp-for="ConfirmPassword" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Confirm Password">
+                                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="my-3">
+                                    <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">Register</button>
+                                </div>
+                                <div class="text-center mt-4 font-weight-light">
+                                    Do you have an account? <a asp-controller="Auth" asp-action="Register" class="text-primary">Login</a>
+                                </div>
+                            </form>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="~/admin/assets/vendors/base/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="~/admin/assets/js/off-canvas.js"></script>
+    <script src="~/admin/assets/js/hoverable-collapse.js"></script>
+    <script src="~/admin/assets/js/template.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

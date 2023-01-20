@@ -1,6 +1,6 @@
-﻿@model SlideItemMV;
+﻿@model  SlideUpdateMV
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Update";
 }
 
 <div class="col-md-6 grid-margin stretch-card">
@@ -10,7 +10,7 @@
             <form class="forms-sample" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label> Photo</label>
-                    <input  asp-for="Photo" class="form-control" placeholder="Photo">
+                    <input type="file" asp-for="Photo" class="form-control" placeholder="Photo">
                     <span class="text-danger" asp-validation-for="Photo"></span>
                 </div>
                 <div class="form-group">
@@ -29,7 +29,7 @@
                     <span class="text-danger" asp-validation-for="OldPrice"></span>
                 </div>
                 <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                <button class="btn btn-light">Cancel</button>
+                <button asp-action="Index" class="btn btn-light">Cancel</button>
             </form>
         </div>
     </div>

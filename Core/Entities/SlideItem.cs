@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Core.Interfaces;
+using Microsoft.AspNetCore.Http;
 
 namespace Core.Entities
 {
-	public class SlideItem
+	public class SlideItem:IEntity
 	{
 		public int Id { get; set; }
         [Required]
@@ -12,7 +14,6 @@ namespace Core.Entities
         [Required]
         public string Price { get; set; }
         public string OldPrice { get; set; }
-
     }
 }
 

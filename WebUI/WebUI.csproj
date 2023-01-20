@@ -24,6 +24,7 @@
     <None Remove="Areas\Admin\Views\SlideItem\" />
     <None Remove="Areas\Admin\Views\UserManager\" />
     <None Remove="Areas\Admin\ViewsModels\Slider\" />
+    <None Remove="Views\Auth\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -48,9 +49,13 @@
     <Folder Include="wwwroot\admin\assets\images\" />
     <Folder Include="wwwroot\admin\assets\js\" />
     <Folder Include="wwwroot\admin\assets\vendors\" />
+    <Folder Include="Views\Auth\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
